@@ -211,6 +211,13 @@ td, th {
 
 .imagem-beneficios{
 	width: 60%;
+	opacity: 1;
+	transition: 400ms opacity;
+	box-shadow: 10px 10px 10px #000000;
+}
+
+.imagem-beneficios:hover{
+	opacity: 0.3;
 }
 
 .itens{
@@ -219,6 +226,10 @@ td, th {
 
 .itens:first-child{
 	font-weight: bold;
+}
+
+.itens:before{
+	content: "★ ";
 }
 
 .utensilios{
@@ -230,4 +241,33 @@ td, th {
 .video{
 	width: 640px;
 	margin: 2em auto;
+}
+/*
+@media screen and (max-widht:480px){
+
+	.caixa, .mapa-conteudo,.principal,.conteudo-beneficios, .video{
+		width: auto;
+	}
+
+}
+
+*/
+
+@media screen and (max-width: 480px) {
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+	
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
+	
 }
